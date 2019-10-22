@@ -1,0 +1,55 @@
+#nav {
+  display: block;
+  width: 100%;
+  height: 100px;
+  margin: 0px 0 3em 0;
+  padding: 0;
+  list-style: none;
+  border-bottom: 1px solid #E6F4FA;;
+}
+
+#nav h5 {
+  display: inline-block;
+  font-family: 'Satisfy', cursive;
+  font-size: 49px;
+  font-weight: 300;
+  color: #3D7992;
+  position: absolute;
+  left: 5%;
+  margin-top: 16px;
+}
+
+#nav ul {
+  display: inline-block;
+  position: absolute;
+  right: 8%;
+}
+
+#nav li {
+  display: inline-block;
+  font-family: 'Dosis', sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  margin-top: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #326378;
+}
+
+.projects-nav {
+  padding: 8px 15px 13px 15px;
+}
+
+.about-nav {
+  padding: 8px 15px 13px 14px;
+}
+
+.link-background {
+  position: absolute;
+  border-radius: 5px;
+  top: 3%;
+  right: 229px;
+  width: 121px;
+  height: 64px;
+  background-color: #E6F4FA;
+}
