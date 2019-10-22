@@ -40,6 +40,10 @@
   font-weight: bold;
   color: #326378;
 }
+#projects-nav:hover, #about-nav:hover {
+  cursor: pointer;
+  color: #3D7992;
+}
 
 #projects-nav {
   padding: 8px 15px 13px 15px;

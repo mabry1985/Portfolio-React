@@ -22,7 +22,7 @@ export class App extends Component {
   handleProjectClick = () => {
     this.setState({ 
       projectSelected: true,
-      navBarVisible: false,
+      navBarVisible: true,
     });
   }
 
