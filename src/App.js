@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import NavBar from './NavBar';
+import LandingPage from './LandingPage';
 
 export class App extends Component {
   state = {
@@ -22,12 +23,16 @@ export class App extends Component {
   render(){
     let content
 
-    if (this.state.navBarVisible === false) {
+    if (this.state.navBarVisible === true) {
       content = 
         < NavBar projectSelected = { this.state.projectSelected }
         onProjectClick = { this.handleProjectClick }
         onAboutClick = { this.handleAboutClick } />
+      } else {
+        content = 
+        <LandingPage/>
       }
+
     return (
       <div className="App">
       {content}
