@@ -29,16 +29,17 @@ export class NavBar extends Component {
     return (
         <div className="main">
           <div id="nav">
-              <h5 className="name-nav">Josh Mabry</h5>
+              <h5 id="name-nav"
+                  onClick={this.props.onLogoClick}>Josh Mabry</h5>
               {/* <div className="link-background"></div> */}
               <ul>
                 <li style={projectStyles}
-                    className="projects-nav"
+                    id="projects-nav"
                     onClick={this.props.onProjectClick}>
                     Projects
                 </li>
                 <li style={aboutStyles}
-                    className="about-nav"
+                    id="about-nav"
                     onClick={this.props.onAboutClick}>
                     About
                 </li>

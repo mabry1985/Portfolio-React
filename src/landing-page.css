@@ -54,14 +54,6 @@
   padding: 20px;
 }
 
-.links {
-  text-decoration: none;
-}
-
-a:link {
-  color:inherit;
-}
-
 .lp-links {
   padding: 10px;
   font-size: 3vw;
@@ -72,6 +64,8 @@ a:link {
 
 .lp-links:hover {
   cursor: pointer;
+  background-color:#E6F4FA;
+  border-radius: 15px;
 }
 
 .construction-blurb {

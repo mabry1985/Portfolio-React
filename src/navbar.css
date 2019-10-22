@@ -5,10 +5,10 @@
   margin: 0px 0 3em 0;
   padding: 0;
   list-style: none;
-  border-bottom: 1px solid #E6F4FA;;
+  border-bottom: 1px solid #E6F4FA;
 }
 
-#nav h5 {
+#name-nav {
   display: inline-block;
   font-family: 'Satisfy', cursive;
   font-size: 49px;
@@ -16,7 +16,12 @@
   color: #3D7992;
   position: absolute;
   left: 5%;
-  margin-top: 16px;
+  margin-top: 11px;
+  padding: 5px;
+}
+
+#name-nav:hover {
+  cursor: pointer;
 }
 
 #nav ul {
@@ -25,22 +30,22 @@
   right: 8%;
 }
 
-#nav li {
+#projects-nav, #about-nav {
   display: inline-block;
   font-family: 'Dosis', sans-serif;
   font-size: 32px;
   font-weight: 600;
-  margin-top: 4px;
+  margin-top: 19px;
   text-decoration: none;
   font-weight: bold;
   color: #326378;
 }
 
-.projects-nav {
+#projects-nav {
   padding: 8px 15px 13px 15px;
 }
 
-.about-nav {
+#about-nav {
   padding: 8px 15px 13px 14px;
 }
 
