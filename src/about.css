@@ -1,0 +1,49 @@
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 10px;
+}
+
+.about {
+  max-width: 53vw;
+  max-height: 90vh;
+  font-family: 'Raleway', sans-serif;
+  color: #326378;
+  font-size: 2vw;
+  text-indent: 10%;
+  margin-left: 60px;
+  padding: 30px;
+  /* border: solid 1px red; */
+}
+
+.about-links-container {
+  text-align: center;
+  /* border: solid 1px red; */
+  width: 28vw;
+  height: 628px;
+  padding-top: 10%;
+  margin-left: 60px;
+  text-decoration: none, !important;
+}
+
+.links {
+  padding: 10px;
+  font-size: 5vh;
+  font-family: 'Dosis', sans-serif;
+  font-weight: bold;
+  color: #326378;
+  width: 221px;
+  margin: 0 auto;
+}
+
+.links:hover {
+  cursor: pointer;
+  background-color:#E6F4FA;
+  border-radius: 15px;
+}
+
+
+/* .quote-block {
+      border: solid 1px red;
+} */

@@ -14,6 +14,10 @@ code {
     monospace;
 }
 
-/* font-family: 'Satisfy', cursive;
-font-family: 'Dosis', sans-serif;
-font-family: 'Raleway', sans-serif; */
+a {
+  text-decoration: none;
+}
+
+a:hover {
+}
+
