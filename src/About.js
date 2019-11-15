@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div className="about-container">
       <div className="about">
-        <p className="paragraph">I was a bartender off and on for the last 12 years at a busy downtown bar where I developed very strong interpersonal
+        <p className="paragraph">I was a bartender off and on for the last 12 years at a busy downtown bar where I developed strong interpersonal
         skills and managed a team of bartenders in a fast paced and, at times, chaotic environment . Recently I spent 4 years
         running my own woodworking business where I designed, built, and sold household goods. I learned the craft through ADX,
         a local maker space, where I had the pleasure to learn from and work with many talented people and eventually began to
@@ -31,10 +31,6 @@ const About = () => {
           <h3 className="links codewars">Codewars</h3>
         </a>
       </div>
-      {/* <div className="quote-block">
-        <h5 className="quote"><em>"Josh Mabry is a great coder, much wow!!"</em></h5>
-        <h5 className="author">-Josh's Mom</h5>
-      </div> */}
     </div>
   )
 }

@@ -31,7 +31,6 @@ export class NavBar extends Component {
           <div id="nav">
               <h5 id="name-nav"
                   onClick={this.props.onLogoClick}>Josh Mabry</h5>
-              {/* <div className="link-background"></div> */}
               <ul>
                 <li style={projectStyles}
                     id="projects-nav"

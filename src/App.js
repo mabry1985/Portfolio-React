@@ -4,12 +4,12 @@ import LandingPage from './LandingPage';
 
 export class App extends Component {
   state = {
-    projectSelected: false, 
-    navBarVisible: true,
+    projectSelected: true, 
+    navBarVisible: false,
   }
 
   handleNavbarVisibility = () => {
-    this.setState({ navBarVisible: !this.state.navBarVisible})
+    this.setState({ navBarVisible: !this.state.navBarVisible })
   }
 
   handleAboutClick = () => {
@@ -32,14 +32,14 @@ export class App extends Component {
     if (this.state.navBarVisible === true) {
       content = 
         < NavBar projectSelected = { this.state.projectSelected }
-                onProjectClick = { this.handleProjectClick }
-                onAboutClick = { this.handleAboutClick } 
-                onLogoClick = {this.handleNavbarVisibility}/>
+                 onProjectClick = { this.handleProjectClick }
+                 onAboutClick = { this.handleAboutClick } 
+                 onLogoClick = {this.handleNavbarVisibility} />
       } else {
         content = 
           <LandingPage projectSelected={this.state.projectSelected}
-                      onProjectClick={this.handleProjectClick}
-                      onAboutClick={this.handleAboutClick} />
+                       onProjectClick={this.handleProjectClick}
+                       onAboutClick={this.handleAboutClick} />
       }
 
     return (

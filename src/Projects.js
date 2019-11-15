@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import './projects.css';
+import holeinthewall from './assets/Landing-Page.png'
+
 
 const Projects = () => {
+
   return (
     <div>
-      <h1>Project Test</h1>
     </div>
   )
 }
