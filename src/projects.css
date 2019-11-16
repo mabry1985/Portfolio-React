@@ -1,9 +1,7 @@
-.slider {
-  margin: 0 auto;
-  margin-top:5%;
-  max-width: 50%;
-}
-
-.slide1 {
-  width: 29px;
+.under-construction {
+  text-align: center;
+  margin: 35% 0 50% 0;
+  font-family: 'Dosis', sans-serif;
+  font-size: 30px;
+  color: #3D7992;
 }
