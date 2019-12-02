@@ -12,14 +12,15 @@ const LandingPage = (props) => {
         <h1 className="name">Josh Mabry</h1>
         <h3 className="subtitle">Developer | Problem Solver | Nice Dude</h3>
         <div className="links-container">
-          <h3 className="lp-links projects-lp"
+          <h3 className="lp-links">Coming Soon</h3>
+          {/* <h3 className="lp-links projects-lp"
               onClick={props.onProjectClick}>
               Projects
           </h3>
           <h3 className="lp-links about-lp"
               onClick={props.onAboutClick}>
               About
-          </h3>
+          </h3> */}
         </div>
     </div>
   </div>

@@ -1,13 +1,12 @@
 import React from 'react';
 import './projects.css';
-import holeinthewall from './assets/Landing-Page.png'
-
+import ProjectGallery from './ProjectGallery.js';
 
 const Projects = () => {
 
   return (
     <div>
-      <h5 class="under-construction">Currently Under Construction</h5>
+      <ProjectGallery/>
     </div>
   );
 }
