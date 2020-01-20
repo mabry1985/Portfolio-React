@@ -5,7 +5,7 @@ import LandingPage from './LandingPage';
 export class App extends Component {
   state = {
     projectSelected: true, 
-    navBarVisible: false,
+    navBarVisible: true,
   }
 
   handleNavbarVisibility = () => {
