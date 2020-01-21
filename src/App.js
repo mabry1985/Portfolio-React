@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
+
+
 import NavBar from './NavBar';
 import LandingPage from './LandingPage';
 
 export class App extends Component {
   state = {
-    projectSelected: true, 
-    navBarVisible: true,
+    projectSelected: false, 
+    navBarVisible: false,
   }
 
   handleNavbarVisibility = () => {
