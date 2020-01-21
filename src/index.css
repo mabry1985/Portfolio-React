@@ -117,3 +117,29 @@ a:hover {
     color: #326378 !important;
     cursor: pointer;
 }
+
+/* About */
+
+.about {
+  font-family: 'Raleway', sans-serif;
+  color: #326378;
+  font-size: 1.8vw;
+  text-indent: 5%;
+  margin-left: 1em;
+  padding: 40px 0 0 30px;
+}
+
+.links {
+  padding: 10px;
+  font-size: 34px;
+  font-family: 'Dosis', sans-serif;
+  text-align: center;
+  font-weight: bold;
+  color: #326378;
+}
+
+.links:hover {
+  cursor: pointer;
+  background-color:#E6F4FA;
+  border-radius: 15px;
+}
