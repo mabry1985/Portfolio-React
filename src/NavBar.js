@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './navbar.css';
+
 import Projects from './Projects';
 import About from './About';
 

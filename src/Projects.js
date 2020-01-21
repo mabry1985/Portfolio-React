@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{ Component } from 'react';
 import { Grid, Image, Icon, Header, Container } from 'semantic-ui-react';
 
 import jobbot from './assets/jobbot.png';
@@ -6,7 +6,7 @@ import devChat from './assets/DevChat.png';
 import paperTrader from './assets/PaperTrader.png';
 import holeitw from './assets/holeitw.png';
 
-class Projects extends React.Component {
+class Projects extends Component {
   state = {
     title: "",
     description: "",
