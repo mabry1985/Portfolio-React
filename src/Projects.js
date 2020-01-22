@@ -148,7 +148,6 @@ class Projects extends Component {
   };
 
   render() {
-    console.log(this.state);
     const {
       title,
       description,

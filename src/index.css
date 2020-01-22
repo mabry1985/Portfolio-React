@@ -57,12 +57,7 @@ a {
 .lp-links:hover {
   cursor: pointer;
   background-color:#E6F4FA;
-  border-radius: 15px;
-}
-
-.logos {
-  width: 54px;
-  padding: 5px;
+  border-radius: 10px;
 }
 
 /* NavBar */
@@ -94,19 +89,18 @@ a {
 }
 
 #nav ul {
-  display: inline-block;
-  position: absolute;
-  right: 8%;
+  float: right;
+  margin: 27px 60px 0 0;
 }
 
 #projects-nav, #about-nav {
-  display: inline-block;
+  float: right;
+  /* display: inline-block; */
   font-family: 'Dosis', sans-serif;
-  font-size: 32px;
-  font-weight: 600;
-  margin-top: 27px;
-  text-decoration: none;
+  font-size: 27px;
   font-weight: bold;
+  padding: 15px;
+  text-decoration: none;
   color: #326378;
 }
 
@@ -114,15 +108,6 @@ a {
   cursor: pointer;
   color: #3D7992;
 }
-
-#projects-nav {
-  padding: 8px 15px 13px 15px;
-}
-
-#about-nav {
-  padding: 8px 15px 13px 14px;
-}
-
 
 /* Projects */
 
