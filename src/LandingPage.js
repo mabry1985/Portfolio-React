@@ -1,14 +1,16 @@
-import React from 'react';
-import { Grid, Container, Image } from 'semantic-ui-react';
+import React, { useContext } from 'react';
+import { Grid, Container, Image, Header } from 'semantic-ui-react';
 import headshot from './assets/Headshot.png';
+import { VisibilityContext } from './contexts/VisibilityContext';
 
 const LandingPage = (props) => {
+  const { handleProjectClick, handleAboutClick } = useContext(VisibilityContext);
   return (
-    <Grid>
+    <Grid stackable>
       <Grid.Row>
         <Grid.Column width={8}>
           <div className="img-container">
-            <Image src={headshot}/>
+            <Image className="headshot" src={headshot}/>
           </div>
         </Grid.Column>
         <Grid.Column 
@@ -17,18 +19,26 @@ const LandingPage = (props) => {
           width={8}
         >
           <Container>
-            <h1 className="name">Josh Mabry</h1>
-            <h3 className="subtitle">Fullstack Web Developer</h3>
-            <div className="links-container">
-              <h3 className="lp-links projects-lp"
-                  onClick={props.onProjectClick}>
-                  Projects
-              </h3>
-              <h3 className="lp-links about-lp"
-                  onClick={props.onAboutClick}>
-                  About
-              </h3>
-            </div>
+            <Grid.Row only='mobile'>
+              <Header as='h1' id="name">
+                Josh Mabry
+              </Header>
+              <Header as='h3' id="subtitle">
+                Fullstack Web Developer
+              </Header>
+            </Grid.Row>
+            <Grid.Row only='mobile'>
+              <div className="links-container">
+                <h3 className="lp-links projects-lp"
+                    onClick={handleProjectClick}>
+                    Projects
+                </h3>
+                <h3 className="lp-links about-lp"
+                    onClick={handleAboutClick}>
+                    About
+                </h3>
+              </div>
+            </Grid.Row>
           </Container>
         </Grid.Column>
       </Grid.Row>
