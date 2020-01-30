@@ -3,7 +3,7 @@ import { Grid, Container } from "semantic-ui-react";
 
 const About = () => {
   return (
-    <Grid>
+    <Grid stackable>
       <Grid.Row>
         <Grid.Column width={10}>
           <Container>
@@ -33,19 +33,20 @@ const About = () => {
           <a
             href="https://drive.google.com/file/d/15X8GmKS3durO2wB7yS5FmdBYmJld7srU/view?usp=sharing"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <h3 className="links resume">Resume</h3>
           </a>
           <a href="mailto:mabrycodes@gmail.com">
             <h3 className="links email">Email</h3>
           </a>
-          <a href="https://www.github.com/mabry1985" target="_blank">
+            <a href="https://www.github.com/mabry1985" target="_blank" rel="noopener noreferrer">
             <h3 className="links github">Github</h3>
           </a>
-          <a href="https://www.linkedin.com/in/mabry1985/" target="_blank">
+            <a href="https://www.linkedin.com/in/mabry1985/" target="_blank" rel="noopener noreferrer">
             <h3 className="links linked-in">Linked In</h3>
           </a>
-          <a href="https://www.codewars.com/users/mabry1985" target="_blank">
+            <a href="https://www.codewars.com/users/mabry1985" target="_blank" rel="noopener noreferrer">
             <h3 className="links codewars">Codewars</h3>
           </a>
           </Container>
