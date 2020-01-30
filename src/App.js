@@ -1,55 +1,27 @@
-import React, { Component } from 'react';
+import React, { useContext } from 'react';
 
-
-import NavBar from './NavBar';
+import NavBar from './PageContainer';
 import LandingPage from './LandingPage';
+import { VisibilityContext } from './contexts/VisibilityContext';
+import { WindowContext } from './contexts/WindowContext';
 
-export class App extends Component {
-  state = {
-    projectSelected: false, 
-    navBarVisible: false,
+const App = () => {
+  const { navBarVisible } = useContext(VisibilityContext)
+  const { windowSize } = useContext(WindowContext);
+  let content;
+
+  if (navBarVisible === true) {
+    content =
+      <NavBar/>
+  } else {
+    content = <LandingPage/>
   }
-
-  handleNavbarVisibility = () => {
-    this.setState({ navBarVisible: !this.state.navBarVisible })
-  }
-
-  handleAboutClick = () => {
-    this.setState({ 
-      projectSelected: false,
-      navBarVisible: true,
-    });
-  }
-
-  handleProjectClick = () => {
-    this.setState({ 
-      projectSelected: true,
-      navBarVisible: true,
-    });
-  }
-
-  render(){
-    let content;
-
-    if (this.state.navBarVisible === true) {
-      content = 
-        < NavBar projectSelected = { this.state.projectSelected }
-                 onProjectClick = { this.handleProjectClick }
-                 onAboutClick = { this.handleAboutClick } 
-                 onLogoClick = {this.handleNavbarVisibility} />
-      } else {
-        content = 
-          <LandingPage projectSelected={this.state.projectSelected}
-                       onProjectClick={this.handleProjectClick}
-                       onAboutClick={this.handleAboutClick} />
-      }
-
-    return (
-      <div className="App">
+  return (
+    <div className="App">
       {content}
-      </div>
-    )
-  }
+    </div>
+  )
 }
 
-export default App;
+export default App
+
