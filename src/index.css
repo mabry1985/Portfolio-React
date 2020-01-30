@@ -26,7 +26,8 @@ a {
   overflow: hidden;
 }
 
-.name {
+
+#name {
   font-family: 'Satisfy', cursive;
   font-weight: 100;
   font-size: 9vw;
@@ -34,7 +35,7 @@ a {
   padding: 0 15px;
 }
 
-.subtitle {
+#subtitle {
   font-family: 'Raleway', sans-serif;
   font-size: 1.75vw;
   font-weight: 100;
@@ -155,4 +156,39 @@ a {
   cursor: pointer;
   background-color:#E6F4FA;
   border-radius: 15px;
+}
+
+@media screen and (max-width: 766px) {
+  
+  .headshot {
+    margin: 10px auto;
+    border-radius: 50%;
+    width: 29vw; 
+    display: inline-block;
+    text-align: center;
+  }
+
+  #name {
+    font-size: 16vw;
+  }
+
+  #subtitle {
+    font-size: 5vw;
+  }
+
+  #hamburger-icon {
+    color: #326378;
+    float: right;
+    margin: 10px;
+  }
+
+  .hamburger-links {
+    color: #326378;
+    font-family: 'Dosis', sans-serif;       
+  }
+
+  #main-content {
+    height: 100%;
+  }
+
 }
