@@ -1,4 +1,12 @@
 import React,{ Component } from 'react';
+import {
+  Swipeable,
+  LEFT,
+  RIGHT,
+  UP,
+  DOWN,
+} from 'react-swipeable';
+
 import { Grid, Image, Icon, Header, Container } from 'semantic-ui-react';
 
 import jobbot from './assets/jobbot.png';
@@ -7,18 +15,22 @@ import paperTrader from './assets/PaperTrader.png';
 import holeitw from './assets/holeitw.png';
 
 class Projects extends Component {
-  state = {
-    title: "",
-    description: "",
-    technologies: [],
-    link: "",
-    githubRepo: "",
-    image: null,
-    currentProjectIndex: 0,
-    beginningOfProjects: true,
-    endOfProjects: false,
-    mobileFriendly: false
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      title: "",
+      description: "",
+      technologies: [],
+      link: "",
+      githubRepo: "",
+      image: null,
+      currentProjectIndex: 0,
+      beginningOfProjects: true,
+      endOfProjects: false,
+      windowSize: this.props.windowSize
+    };
+  }
 
   componentDidMount() {
     this.updateProject(0);
@@ -109,7 +121,7 @@ class Projects extends Component {
 
   handlePointerRightClick = () => {
     let index = this.state.currentProjectIndex;
-    index += 1;
+      index += 1;
     if (index >= this.projects.length - 1) {
       this.setState({
         currentProjectIndex: index,
@@ -129,7 +141,7 @@ class Projects extends Component {
 
   handlePointerLeftClick = () => {
     let index = this.state.currentProjectIndex;
-    index -= 1;
+      index -= 1;
     if (index === 0) {
       this.setState({
         currentProjectIndex: index,
@@ -147,6 +159,19 @@ class Projects extends Component {
     }
   };
 
+  onSwiping = ({ dir, first }) => {
+    let index = this.state.currentProjectIndex;
+    if (first && dir === LEFT && index < this.projects.length - 1) {
+      this.handlePointerRightClick();
+    } 
+    if (first && dir === RIGHT && index > 0) {
+      this.handlePointerLeftClick();
+    }
+
+    if (dir === UP) console.log("Swiping - UP");
+    if (dir === DOWN) console.log("Swiping - DOWN");
+  };
+
   render() {
     const {
       title,
@@ -156,67 +181,98 @@ class Projects extends Component {
       githubRepo,
       image,
       beginningOfProjects,
-      endOfProjects
+      endOfProjects,
+      windowSize
     } = this.state;
 
+    const leftArrow = (
+      <Icon
+        size="big"
+        className="project-arrows"
+        name="caret square left outline"
+        disabled={beginningOfProjects}
+        onClick={this.handlePointerLeftClick}
+      />
+    );
+
+    const rightArrow = (
+      <Icon
+        size="big"
+        className="project-arrows"
+        name="caret square right outline"
+        onClick={this.handlePointerRightClick}
+        disabled={endOfProjects}
+      />
+    );
+
     return (
-      <div className="projects">
-        <Grid>
-          <Grid.Row>
-            <Grid.Column verticalAlign="middle" width={1}>
-              <Icon
-                size="big"
-                className="project-arrows"
-                name="caret square left outline"
-                disabled={beginningOfProjects}
-                onClick={this.handlePointerLeftClick}
-              />
-            </Grid.Column>
-            <Grid.Column width={10}>
-              <Image src={image} rounded bordered />
-            </Grid.Column>
-            <Grid.Column verticalAlign="middle" width={4}>
-              <Container>
-                <Header as="h2" className="project-title">
-                  {title}
-                </Header>
-                <p>{description}</p>
-                <Header as="h4" className="project-tech">
-                  Technologies Used
-                </Header>
-                <p>{technologies}</p>
-                {link && (
-                  <Header as="h4">
-                    <a href={link} target="_blank">
-                      Demo Site
-                    </a>
-                    {link.includes("heroku") ? (
-                      <p>
-                        (This site is hosted on Heroku and may take a little
-                        while to load)
-                      </p>
-                    ) : null}
+      <Swipeable 
+        onSwiping={eventData => this.onSwiping(eventData)} 
+        trackMouse={true}
+        preventDefaultTouchmoveEvent={true}
+      >
+        <div className="projects">
+           
+          <Grid stackable>
+            <Grid.Row>
+              <Grid.Column verticalAlign="middle" width={1} only="computer">
+                {leftArrow}
+              </Grid.Column>
+              <Grid.Column width={10}>
+                <Image src={image} rounded bordered />
+              </Grid.Column>
+              <Grid.Column verticalAlign="middle" width={4}>
+                <Container>
+                  <Header as="h2" className="project-title">
+                    {title}
                   </Header>
-                )}
-                <Header as="h4">
-                  <a href={githubRepo} target="_blank">
-                    Github Repository
-                  </a>
-                </Header>
-              </Container>
-            </Grid.Column>
-            <Grid.Column verticalAlign="middle" width={1}>
-              <Icon
-                size="big"
-                className="project-arrows"
-                name="caret square right outline"
-                onClick={this.handlePointerRightClick}
-                disabled={endOfProjects}
-              />
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
-      </div>
+                  <p>{description}</p>
+                  <Header as="h4" className="project-tech">
+                    Technologies Used
+                  </Header>
+                  <p>{technologies}</p>
+                  {windowSize.width > 766 ? (
+                    link && (
+                      <Header as="h4">
+                        <a
+                          href={link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Demo Site
+                        </a>
+                        {link.includes("heroku") ? (
+                          <p>
+                            (This site is hosted on Heroku and may take a little
+                            while to load)
+                          </p>
+                        ) : null}
+                      </Header>
+                    )
+                  ) : (
+                    <p>
+                      (This app is not mobile friendly. Please visit my site on
+                      a computer to view a demo for this project.)
+                    </p>
+                  )}
+                  <Header as="h4">
+                    <a
+                      href={githubRepo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Github Repository
+                    </a>
+                  </Header>
+                </Container>
+              </Grid.Column>
+              <Grid.Column verticalAlign="middle" width={1} only="computer">
+                {rightArrow}
+              </Grid.Column>
+            </Grid.Row>
+          </Grid>
+        </div>
+      </Swipeable>
     );
   }
 }
