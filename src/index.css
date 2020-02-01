@@ -26,7 +26,6 @@ a {
   overflow: hidden;
 }
 
-
 #name {
   font-family: 'Satisfy', cursive;
   font-weight: 100;
@@ -152,6 +151,13 @@ a {
   padding: 40px 0 0 30px;
 }
 
+#about-header {
+  font-family: 'Raleway', sans-serif;
+  color: #326378;
+  text-decoration: underline;
+  text-align: center !important;
+}
+
 .links {
   padding: 10px;
   font-size: 34px;
@@ -220,9 +226,6 @@ a {
     text-align: center;
   }
 
-  .swipe-count {
-  }
-
   .projects {
     margin: 10px 0 0 0;
   }
@@ -247,4 +250,10 @@ a {
     display: none;
   }
 
+}
+
+@media screen and (min-width: 767px) {
+  #about-header {
+    display: none; 
+  }
 }

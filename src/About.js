@@ -1,13 +1,14 @@
 import React from 'react'
-import { Grid, Container } from "semantic-ui-react";
+import { Grid, Container, Header } from "semantic-ui-react";
 
 const About = () => {
   return (
     <Grid stackable reversed={true} >
-      <Grid.Row>
+      <Grid.Row verticalAlign='top'>
         <Grid.Column width={10}>
           <Container>
-            <p className="about">
+            <h3 id='about-header'>About Me</h3>
+            <p className='about'>
               I was a bartender off and on for the last 12 years at a busy downtown
               bar where I developed strong interpersonal skills and managed a team
               of bartenders in a fast paced and, at times, chaotic environment .
