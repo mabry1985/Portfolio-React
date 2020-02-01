@@ -10,12 +10,10 @@ const MainContent = () => {
   const { projectSelected } = useContext(VisibilityContext)
   const { windowSize } = useContext(WindowContext);
   const size = windowSize;
-
-  const content = projectSelected ? <Projects windowSize={size}/> : <About/>
   
   return (
     <div id="main-content">
-      {content}
+      {projectSelected ? <Projects windowSize={size}/> : <About/>}
     </div>
   )
 }

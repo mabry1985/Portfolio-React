@@ -1,13 +1,7 @@
 import React,{ Component } from 'react';
-import {
-  Swipeable,
-  LEFT,
-  RIGHT,
-  UP,
-  DOWN,
-} from 'react-swipeable';
+import { Swipeable, LEFT, RIGHT } from 'react-swipeable';
 
-import { Grid, Image, Icon, Header, Container } from 'semantic-ui-react';
+import { Grid, Image, Icon, Header, Container, Label} from 'semantic-ui-react';
 
 import jobbot from './assets/jobbot.png';
 import devChat from './assets/DevChat.png';
@@ -61,7 +55,7 @@ class Projects extends Component {
       title: "DevChat",
       description:
         "This is a slack clone I made to practice React and Redux. I used Firebase for authentication, database, and deployment. To avoid signing up you can use email: Test@test.com and password: Qwerty",
-      technologies: ["React", "Redux", "Firebase", "React Semantic UI"],
+      technologies: ["React", "Redux", "Firebase", "Semantic UI"],
       link: "https://slack-6f481.firebaseapp.com/",
       githubRepo: "https://github.com/mabry1985/DevChat",
       image: devChat,
@@ -78,7 +72,7 @@ class Projects extends Component {
         "Node",
         "D3",
         "Heroku",
-        "React Styled Components"
+        "Styled Components"
       ],
       link: "https://jobbot-dashboard.herokuapp.com",
       githubRepo: "https://github.com/mabry1985/jobBot-dashboard",
@@ -110,11 +104,7 @@ class Projects extends Component {
   formatTechnologies = tech => {
     let updatedTech = [];
     for (let i = 0; i < tech.length; i++) {
-      if (i === tech.length - 1) {
-        updatedTech.push(<span key={tech[i]}>{tech[i]}</span>);
-      } else {
-        updatedTech.push(<span key={tech[i]}>{tech[i]}, </span>);
-      }
+      updatedTech.push(<Label color='teal' key={tech[i]}>{tech[i]}</Label>);
     }
     return updatedTech;
   };
@@ -167,9 +157,6 @@ class Projects extends Component {
     if (first && dir === RIGHT && index > 0) {
       this.handlePointerLeftClick();
     }
-
-    if (dir === UP) console.log("Swiping - UP");
-    if (dir === DOWN) console.log("Swiping - DOWN");
   };
 
   render() {
@@ -182,7 +169,8 @@ class Projects extends Component {
       image,
       beginningOfProjects,
       endOfProjects,
-      windowSize
+      windowSize,
+      currentProjectIndex
     } = this.state;
 
     const leftArrow = (
@@ -206,13 +194,16 @@ class Projects extends Component {
     );
 
     return (
-      <Swipeable 
-        onSwiping={eventData => this.onSwiping(eventData)} 
-        trackMouse={true}
+      <Swipeable
+        onSwiping={eventData => this.onSwiping(eventData)}
+        trackMouse={false}
         preventDefaultTouchmoveEvent={true}
       >
         <div className="projects">
-           
+          {windowSize.width < 500 ? (
+            <p className="swipe-info">Swipe to change project</p>
+          ) : null}
+
           <Grid stackable>
             <Grid.Row>
               <Grid.Column verticalAlign="middle" width={1} only="computer">
@@ -220,19 +211,26 @@ class Projects extends Component {
               </Grid.Column>
               <Grid.Column width={10}>
                 <Image src={image} rounded bordered />
+                {windowSize.width < 500 ? 
+                  <p className="swipe-count">
+                    {currentProjectIndex + 1} / {this.projects.length}
+                  </p>
+                  : null
+                }
+
               </Grid.Column>
               <Grid.Column verticalAlign="middle" width={4}>
-                <Container>
+                <Container className="project-container">
                   <Header as="h2" className="project-title">
                     {title}
                   </Header>
                   <p>{description}</p>
-                  <Header as="h4" className="project-tech">
-                    Technologies Used
-                  </Header>
-                  <p>{technologies}</p>
+
+                  {technologies}
+
                   {windowSize.width > 766 ? (
-                    link && (
+                    <div className="project-links">
+                      {link && (
                       <Header as="h4">
                         <a
                           href={link}
@@ -248,22 +246,18 @@ class Projects extends Component {
                           </p>
                         ) : null}
                       </Header>
-                    )
-                  ) : (
-                    <p>
-                      (This app is not mobile friendly. Please visit my site on
-                      a computer to view a demo for this project.)
-                    </p>
-                  )}
-                  <Header as="h4">
-                    <a
-                      href={githubRepo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Github Repository
-                    </a>
-                  </Header>
+                      )}
+                      <Header as="h4">
+                        <a
+                          href={githubRepo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Github Repo
+                        </a>
+                      </Header>
+                    </div>
+                  ) : null}
                 </Container>
               </Grid.Column>
               <Grid.Column verticalAlign="middle" width={1} only="computer">

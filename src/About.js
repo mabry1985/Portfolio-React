@@ -3,28 +3,28 @@ import { Grid, Container } from "semantic-ui-react";
 
 const About = () => {
   return (
-    <Grid stackable>
+    <Grid stackable reversed={true} >
       <Grid.Row>
         <Grid.Column width={10}>
           <Container>
             <p className="about">
-            I was a bartender off and on for the last 12 years at a busy downtown
-            bar where I developed strong interpersonal skills and managed a team
-            of bartenders in a fast paced and, at times, chaotic environment .
-            Recently I spent 4 years running my own woodworking business where I
-            designed, built, and sold household goods. I learned the craft through
-            ADX, a local maker space, where I had the pleasure to learn from and
-            work with many talented people and eventually began to create and
-            teach classes of my own. I eventually decided that running my own
-            business wasn't what I wanted to do and enrolled in Epicodus' coding
-            bootcamp to learn how to develop software. I would say that my only
-            regret now is that I hadn't started coding sooner! I absolutely love
-            the problem solving and seemingly infinite pool of things to learn and
-            can't wait to see where this next chapter of my life takes me.
+              I was a bartender off and on for the last 12 years at a busy downtown
+              bar where I developed strong interpersonal skills and managed a team
+              of bartenders in a fast paced and, at times, chaotic environment .
+              Recently I spent 4 years running my own woodworking business where I
+              designed, built, and sold household goods. I learned the craft through
+              ADX, a local maker space, where I had the pleasure to learn from and
+              work with many talented people and eventually began to create and
+              teach classes of my own. I eventually decided that running my own
+              business wasn't what I wanted to do and enrolled in Epicodus' coding
+              bootcamp to learn how to develop software. I would say that my only
+              regret now is that I hadn't started coding sooner! I absolutely love
+              the problem solving and seemingly infinite pool of things to learn and
+              can't wait to see where this next chapter of my life takes me.
             </p>
           </Container>
         </Grid.Column>
-        <Grid.Column>
+        <Grid.Column only='tablet computer'>
 
         </Grid.Column>
   
