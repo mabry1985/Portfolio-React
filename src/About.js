@@ -7,7 +7,13 @@ const About = () => {
       <Grid.Row verticalAlign='top'>
         <Grid.Column width={10}>
           <Container>
-            <h3 id='about-header'>About Me</h3>
+            <Header 
+              as='h3' 
+              id='about-header'
+              dividing
+            >
+              About Me
+            </Header>
             <p className='about'>
               I was a bartender off and on for the last 12 years at a busy downtown
               bar where I developed strong interpersonal skills and managed a team
@@ -41,13 +47,25 @@ const About = () => {
           <a href="mailto:mabrycodes@gmail.com">
             <h3 className="links email">Email</h3>
           </a>
-            <a href="https://www.github.com/mabry1985" target="_blank" rel="noopener noreferrer">
+            <a 
+              href="https://www.github.com/mabry1985" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
             <h3 className="links github">Github</h3>
           </a>
-            <a href="https://www.linkedin.com/in/mabry1985/" target="_blank" rel="noopener noreferrer">
+            <a 
+              href="https://www.linkedin.com/in/mabry1985/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
             <h3 className="links linked-in">Linked In</h3>
           </a>
-            <a href="https://www.codewars.com/users/mabry1985" target="_blank" rel="noopener noreferrer">
+            <a 
+              href="https://www.codewars.com/users/mabry1985" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
             <h3 className="links codewars">Codewars</h3>
           </a>
           </Container>
