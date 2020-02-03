@@ -172,9 +172,19 @@ a {
   border-radius: 15px;
 }
 
+/* misc */
+
+#rotate-phone {
+  color: pink !important;
+  opacity: 60%;
+  font-family: 'Dosis', sans-serif;   
+  text-align: center;
+  margin-top: 100px;
+}
+
 /* Media Queries */
 
-@media screen and (max-width: 766px) {
+@media screen and (max-width: 766px) and (orientation: portrait) {
   
   .headshot {
     margin: 60px auto 10px auto;
@@ -218,7 +228,7 @@ a {
     height: 100%;
   }
   
-  .swipe-info, .swipe-count {
+  #swipe-info, .swipe-count {
     color: #326378;
     opacity: 60%;
     font-family: 'Dosis', sans-serif;   
@@ -247,6 +257,10 @@ a {
     margin-left: 0;
     margin-top: 27px !important;
     padding: 0;
+  }
+
+  #about-header {
+    text-decoration: none;
   }
 
   .links {
