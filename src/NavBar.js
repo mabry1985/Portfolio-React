@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { VisibilityContext } from './contexts/VisibilityContext';
-import MainContent from './MainContent';
 
 const NavBar = () => {
   const { handleProjectClick, handleAboutClick, handleNavbarVisibility, projectSelected } = useContext(VisibilityContext);
@@ -22,27 +21,22 @@ const NavBar = () => {
   }
 
   return (
-    <div>
-      <div className="main">
-        <div id="nav">
-          <h5 id="name-nav"
-            onClick={() => handleNavbarVisibility()}>Josh Mabry</h5>
-          <ul>
-            <li style={aboutStyles}
-              id="about-nav"
-              onClick={() => handleAboutClick()}>
-              About
-            </li>
-            <li style={projectStyles}
-              id="projects-nav"
-              onClick={() => handleProjectClick()}>
-              Projects
-            </li>
-          </ul>
-        </div>
-        <MainContent/>
-      </div>
-    </div>
+    <nav id="nav">
+      <h5 id="name-nav"
+        onClick={() => handleNavbarVisibility()}>Josh Mabry</h5>
+      <ul>
+        <li style={aboutStyles}
+          id="about-nav"
+          onClick={() => handleAboutClick()}>
+          About
+        </li>
+        <li style={projectStyles}
+          id="projects-nav"
+          onClick={() => handleProjectClick()}>
+          Projects
+        </li>
+      </ul>
+    </nav>
   )
 }
 

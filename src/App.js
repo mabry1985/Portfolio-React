@@ -3,6 +3,7 @@ import React, { useContext } from 'react';
 import NavBar from './PageContainer';
 import LandingPage from './LandingPage';
 import { VisibilityContext } from './contexts/VisibilityContext';
+import MainContent from './MainContent';
 
 const App = () => {
   const { navBarVisible } = useContext(VisibilityContext);
@@ -10,7 +11,12 @@ const App = () => {
   let content;
   
 if (navBarVisible === true) {
-    content = <NavBar/>
+    content = (
+      <React.Fragment>
+        <NavBar/>
+        <MainContent/>
+      </React.Fragment>
+    )
   } else {
     content = <LandingPage/>
   }
