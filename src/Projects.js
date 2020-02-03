@@ -219,7 +219,11 @@ class Projects extends Component {
                 }
 
               </Grid.Column>
-              <Grid.Column verticalAlign="middle" width={4}>
+              <Grid.Column 
+                id='project-description-column' 
+                verticalAlign="middle" 
+                width={4}
+              >
                 <Container className="project-container">
                   <Header as="h2" className="project-title">
                     {title}
