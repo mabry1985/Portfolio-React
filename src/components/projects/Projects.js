@@ -48,7 +48,9 @@ class Projects extends Component {
   formatTechnologies = tech => {
     let updatedTech = [];
     for (let i = 0; i < tech.length; i++) {
-      updatedTech.push(<Label color='teal' key={tech[i]}>{tech[i]}</Label>);
+      updatedTech.push(
+        <Label className='tech-labels' color='teal' key={tech[i]}>{tech[i]}</Label>
+      );
     }
     return updatedTech;
   };
