@@ -121,7 +121,7 @@ class Projects extends Component {
       <Swipeable
         onSwiping={eventData => this.onSwiping(eventData)}
         trackMouse={false}
-        preventDefaultTouchmoveEvent={true}
+        preventDefaultTouchmoveEvent={false}
       >
         <div className="projects">
           {windowSize.width < 500 ? (

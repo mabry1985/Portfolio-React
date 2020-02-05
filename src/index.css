@@ -185,6 +185,10 @@ a {
 /* Media Queries */
 
 @media screen and (max-width: 766px) and (orientation: portrait) {
+
+  * {
+    overflow: auto;
+  }
   
   .headshot {
     margin: 60px auto 10px auto;
@@ -253,7 +257,7 @@ a {
   }
 
   .about {
-    font-size: 2.3vh;
+    font-size: 3.3vh;
     margin-left: 0;
     margin-top: 27px !important;
     padding: 0;
