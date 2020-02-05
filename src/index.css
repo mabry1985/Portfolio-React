@@ -175,7 +175,6 @@ a {
 /* misc */
 
 #rotate-phone {
-  color: pink !important;
   opacity: 60%;
   font-family: 'Dosis', sans-serif;   
   text-align: center;
@@ -184,7 +183,7 @@ a {
 
 /* Media Queries */
 
-@media screen and (max-width: 766px) and (orientation: portrait) {
+@media screen and (max-width: 769px) and (orientation: portrait) {
   
   .headshot {
     margin: 60px auto 10px auto;

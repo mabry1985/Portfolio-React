@@ -24,9 +24,9 @@ const App = () => {
         </React.Fragment>
       )
     } else if (!landscapeMode && navBarVisible && windowSize.width < 766) {
-      content = <HamburgerMenu/>
+        content = <HamburgerMenu/>
     } else if (!landscapeMode) {
-      content = <LandingPage/>
+        content = <LandingPage/>
     }
 
   return (
