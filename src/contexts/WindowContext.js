@@ -15,9 +15,9 @@ const WindowContextProvider = (props) => {
   }, [size])
 
   const handleLandscapeToggle = (size) =>{
-    if (size.width > size.height && size.height < 766) {
+    if (size.width > size.height && size.height < 736) {
       return true;
-    } else if (size.width < size.height && size.width < 766) {
+    } else if (size.width < size.height && size.width < 813) {
       return false;
     }
   }

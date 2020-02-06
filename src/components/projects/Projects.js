@@ -43,6 +43,7 @@ class Projects extends Component {
       githubRepo,
       image
     });
+ 
   };
 
   formatTechnologies = tech => {
@@ -144,7 +145,12 @@ class Projects extends Component {
                 />
               </Grid.Column>
               <Grid.Column width={10}>
-                <Image src={image} rounded bordered />
+                <Image 
+                  className="project-image" 
+                  src={image} 
+                  rounded 
+                  bordered 
+                />
                 {windowSize.width < 500 ? (
                   <p className="swipe-count">
                     {currentProjectIndex + 1} / {projectList.length}
