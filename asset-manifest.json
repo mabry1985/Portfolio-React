@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.605741d7.chunk.css",
-    "main.js": "/static/js/main.79c7f17a.chunk.js",
-    "main.js.map": "/static/js/main.79c7f17a.chunk.js.map",
+    "main.css": "/static/css/main.e12f93fd.chunk.css",
+    "main.js": "/static/js/main.5ce6d9cc.chunk.js",
+    "main.js.map": "/static/js/main.5ce6d9cc.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.492dfbbb.js",
     "runtime-main.js.map": "/static/js/runtime-main.492dfbbb.js.map",
     "static/js/2.8ea434cd.chunk.js": "/static/js/2.8ea434cd.chunk.js",
     "static/js/2.8ea434cd.chunk.js.map": "/static/js/2.8ea434cd.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.d19513f1ab5058916c25fc167333e1b0.js": "/precache-manifest.d19513f1ab5058916c25fc167333e1b0.js",
+    "precache-manifest.5f9e0a316a87cd62f9d8461afdffe28e.js": "/precache-manifest.5f9e0a316a87cd62f9d8461afdffe28e.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.605741d7.chunk.css.map": "/static/css/main.605741d7.chunk.css.map",
+    "static/css/main.e12f93fd.chunk.css.map": "/static/css/main.e12f93fd.chunk.css.map",
     "static/media/DevChat.png": "/static/media/DevChat.4a7516d1.png",
     "static/media/Headshot.png": "/static/media/Headshot.e00f57c3.png",
     "static/media/PaperTrader.png": "/static/media/PaperTrader.aa933a9c.png",
@@ -20,7 +20,7 @@
   "entrypoints": [
     "static/js/runtime-main.492dfbbb.js",
     "static/js/2.8ea434cd.chunk.js",
-    "static/css/main.605741d7.chunk.css",
-    "static/js/main.79c7f17a.chunk.js"
+    "static/css/main.e12f93fd.chunk.css",
+    "static/js/main.5ce6d9cc.chunk.js"
   ]
 }
