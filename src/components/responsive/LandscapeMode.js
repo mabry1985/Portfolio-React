@@ -7,7 +7,7 @@ const LandscapeMode = () => {
     <div id='rotate-phone'>
       <Header icon>
         <Icon name="sync alternate" />
-          Please rotate your phone to continue.
+          Please rotate your device to continue. <br/>
       </Header>
     </div>
   );

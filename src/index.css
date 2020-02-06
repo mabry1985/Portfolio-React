@@ -122,11 +122,11 @@ a {
 
 /* Projects */
 
-.projects {
+#projects {
   margin: 65px 20px 30px 20px;
 }
 
-.projects p {
+#projects p {
   color: #326378 !important;
   font-weight: 500 !important;
 }
@@ -151,6 +151,17 @@ a {
 .project-arrows {
     color: #326378 !important;
     cursor: pointer;
+}
+
+#swipe-container {
+  margin-top: 20px;
+}
+
+#swipe-info, #swipe-count {
+  color: #326378;
+  opacity: 60%;
+  font-family: 'Dosis', sans-serif;
+  text-align: center;
 }
 
 /* About */
@@ -240,15 +251,8 @@ a {
   #main-content {
     height: 100%;
   }
-  
-  #swipe-info, .swipe-count {
-    color: #326378;
-    opacity: 60%;
-    font-family: 'Dosis', sans-serif;   
-    text-align: center;
-  }
 
-  .projects {
+  #projects {
     margin: 10px 0 0 0;
   }
 
