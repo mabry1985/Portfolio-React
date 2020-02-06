@@ -126,100 +126,101 @@ class Projects extends Component {
         trackMouse={false}
         preventDefaultTouchmoveEvent={false}
       >
-        <div className="projects">
-          {windowSize.width < 500 ? (
+        <Grid id="projects" stackable>
+          <Grid.Row id="swipe-container" centered only='mobile tablet' textAlign='center'>
             <Header as="h5" id="swipe-info" dividing>
-              Swipe to change project
+              Swipe to change project {currentProjectIndex + 1} / {projectList.length}
             </Header>
-          ) : null}
+          </Grid.Row>
+          <Grid.Row>
+            <Grid.Column 
+              verticalAlign="middle" 
+              textAlign="center"
+              width={1} 
+              only="computer"
+            >
+              <Icon
+                size="big"
+                className="project-arrows"
+                name="caret square left outline"
+                disabled={beginningOfProjects}
+                onClick={this.handlePointerLeftClick}
+              />
+            </Grid.Column>
+            <Grid.Column width={10}>
+              <Image 
+                className="project-image" 
+                src={image} 
+                rounded 
+                bordered 
+              />
+            </Grid.Column>
+            <Grid.Column
+              id="project-description-column"
+              verticalAlign="middle"
+              width={windowSize.width < 769 ? 6 : 4}
+            >
+              <Container className="project-container">
+                <a
+                  href={githubRepo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Header as="h2" className="project-title">
+                    {title}
+                  </Header>
+                </a>
+                <p>{description}</p>
 
-          <Grid stackable>
-            <Grid.Row>
-              <Grid.Column verticalAlign="middle" width={1} only="computer">
-                <Icon
-                  size="big"
-                  className="project-arrows"
-                  name="caret square left outline"
-                  disabled={beginningOfProjects}
-                  onClick={this.handlePointerLeftClick}
-                />
-              </Grid.Column>
-              <Grid.Column width={10}>
-                <Image 
-                  className="project-image" 
-                  src={image} 
-                  rounded 
-                  bordered 
-                />
-                {windowSize.width < 500 ? (
-                  <p className="swipe-count">
-                    {currentProjectIndex + 1} / {projectList.length}
-                  </p>
-                ) : null}
-              </Grid.Column>
-              <Grid.Column
-                id="project-description-column"
-                verticalAlign="middle"
-                width={4}
-              >
-                <Container className="project-container">
-                  <a
-                    href={githubRepo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Header as="h2" className="project-title">
-                      {title}
-                    </Header>
-                  </a>
-                  <p>{description}</p>
+                {technologies}
 
-                  {technologies}
-
-                  {windowSize.width > 766 ? (
-                    <div className="project-links">
-                      {link && (
-                        <Header as="h4">
-                          <a
-                            href={link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            Demo Site
-                          </a>
-                          {link.includes("heroku") ? (
-                            <p>
-                              (This site is hosted on Heroku and may take a
-                              little while to load)
-                            </p>
-                          ) : null}
-                        </Header>
-                      )}
+                {windowSize.width > 766 ? (
+                  <div className="project-links">
+                    {link && (
                       <Header as="h4">
                         <a
-                          href={githubRepo}
+                          href={link}
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          Github Repo
+                          Demo Site
                         </a>
+                        {link.includes("heroku") ? (
+                          <p>
+                            (This site is hosted on Heroku and may take a
+                            little while to load)
+                          </p>
+                        ) : null}
                       </Header>
-                    </div>
-                  ) : null}
-                </Container>
-              </Grid.Column>
-              <Grid.Column verticalAlign="middle" width={1} only="computer">
-                <Icon
-                  size="big"
-                  className="project-arrows"
-                  name="caret square right outline"
-                  onClick={this.handlePointerRightClick}
-                  disabled={endOfProjects}
-                />
-              </Grid.Column>
-            </Grid.Row>
-          </Grid>
-        </div>
+                    )}
+                    <Header as="h4">
+                      <a
+                        href={githubRepo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Github Repo
+                      </a>
+                    </Header>
+                  </div>
+                ) : null}
+              </Container>
+            </Grid.Column>
+            <Grid.Column 
+              verticalAlign="middle" 
+              textAlign="center"
+              width={1} 
+              only="computer">
+              <Icon
+                size="big"
+                className="project-arrows"
+                name="caret square right outline"
+                onClick={this.handlePointerRightClick}
+                disabled={endOfProjects}
+              />
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
       </Swipeable>
     );
   }

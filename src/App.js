@@ -17,17 +17,17 @@ const App = () => {
   if (landscapeMode) {
     content = <LandscapeMode/>
   } else if (!landscapeMode && navBarVisible && windowSize.width > 766) {
-      content = (
-        <React.Fragment>
-          <ResponsiveNav/>
-          <MainContent/>
-        </React.Fragment>
-      )
-    } else if (!landscapeMode && navBarVisible && windowSize.width < 766) {
-        content = <HamburgerMenu/>
-    } else if (!landscapeMode) {
-        content = <LandingPage/>
-    }
+    content = (
+      <React.Fragment>
+        <ResponsiveNav/>
+        <MainContent/>
+      </React.Fragment>
+    )
+  } else if (!landscapeMode && navBarVisible && windowSize.width < 766) {
+      content = <HamburgerMenu/>
+  } else if (!landscapeMode) {
+      content = <LandingPage/>
+  }
 
   return (
     <div className="App">
