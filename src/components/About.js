@@ -10,7 +10,7 @@ const About = () => {
             <Header as="h3" id="about-header" dividing>
               About Me
             </Header>
-            <p className="about">
+            <p id="about">
               I was a bartender off and on for the last 12 years at a busy
               downtown bar where I managed a team of bartenders in a fast paced
               environment. Recently I spent 4 years running my own woodworking

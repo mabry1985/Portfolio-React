@@ -7,23 +7,26 @@ import LandscapeMode from './components/responsive/LandscapeMode';
 
 import { VisibilityContext } from './contexts/VisibilityContext';
 import { WindowContext } from './contexts/WindowContext';
+import HamburgerMenu from './components/navigation/HamburgerMenu';
 
 const App = () => {
   const { navBarVisible } = useContext(VisibilityContext);
-  const { landscapeMode } = useContext(WindowContext);
+  const { landscapeMode, windowSize } = useContext(WindowContext);
   let content;
 
   if (landscapeMode) {
     content = <LandscapeMode/>
-  } else if (!landscapeMode && navBarVisible === true) {
+  } else if (!landscapeMode && navBarVisible && windowSize.width > 766) {
       content = (
         <React.Fragment>
           <ResponsiveNav/>
           <MainContent/>
         </React.Fragment>
       )
+    } else if (!landscapeMode && navBarVisible && windowSize.width < 766) {
+        content = <HamburgerMenu/>
     } else if (!landscapeMode) {
-      content = <LandingPage/>
+        content = <LandingPage/>
     }
 
   return (
