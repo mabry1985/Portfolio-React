@@ -2,7 +2,7 @@
   "name": "portfolio-react",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://joshmabry.dev",
+  "homepage": "https://www.joshmabry.dev",
   "dependencies": {
     "gh-pages": "^2.1.1",
     "node-sass": "^4.13.0",
