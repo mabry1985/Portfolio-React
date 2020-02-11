@@ -12,7 +12,6 @@ import holeitw from '../../assets/holeitw.png';
       link: "https://slack-6f481.firebaseapp.com/",
       githubRepo: "https://github.com/mabry1985/DevChat",
       image: devChat,
-      mobileFriendly: true
     },
     {
       title: "jobBot",
@@ -30,7 +29,6 @@ import holeitw from '../../assets/holeitw.png';
       link: "https://jobbot-dashboard.herokuapp.com",
       githubRepo: "https://github.com/mabry1985/jobBot-dashboard",
       image: jobbot,
-      mobileFriendly: true
     },
     {
       title: "Paper Trader",
@@ -40,7 +38,6 @@ import holeitw from '../../assets/holeitw.png';
       link: "http://floating-scrubland-71604.herokuapp.com/",
       githubRepo: "https://github.com/mabry1985/paper_trader",
       image: paperTrader,
-      mobileFriendly: false
     },
     {
       title: "Hole in the Wall",
@@ -50,6 +47,5 @@ import holeitw from '../../assets/holeitw.png';
       link: "",
       githubRepo: "https://github.com/mabry1985/hole-in-the-wall.git",
       image: holeitw,
-      mobileFriendly: false
     }
   ];
