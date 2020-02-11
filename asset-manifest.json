@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.129b6321.chunk.css",
-    "main.js": "/static/js/main.243ae671.chunk.js",
-    "main.js.map": "/static/js/main.243ae671.chunk.js.map",
+    "main.js": "/static/js/main.034432c0.chunk.js",
+    "main.js.map": "/static/js/main.034432c0.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.492dfbbb.js",
     "runtime-main.js.map": "/static/js/runtime-main.492dfbbb.js.map",
     "static/js/2.83a592cb.chunk.js": "/static/js/2.83a592cb.chunk.js",
     "static/js/2.83a592cb.chunk.js.map": "/static/js/2.83a592cb.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.fdd7a3a1d4efb41d94b4b701cbbb970b.js": "/precache-manifest.fdd7a3a1d4efb41d94b4b701cbbb970b.js",
+    "precache-manifest.15747c323747d6a2b03fb366f6a8e96d.js": "/precache-manifest.15747c323747d6a2b03fb366f6a8e96d.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.129b6321.chunk.css.map": "/static/css/main.129b6321.chunk.css.map",
     "static/media/DevChat.png": "/static/media/DevChat.4a7516d1.png",
@@ -21,6 +21,6 @@
     "static/js/runtime-main.492dfbbb.js",
     "static/js/2.83a592cb.chunk.js",
     "static/css/main.129b6321.chunk.css",
-    "static/js/main.243ae671.chunk.js"
+    "static/js/main.034432c0.chunk.js"
   ]
 }
