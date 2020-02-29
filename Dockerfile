@@ -1,13 +1,11 @@
-FROM node:12.2.0-alpine
+FROM node:12.2.0-alpine as build-deps
+WORKDIR /usr/src/app
+COPY package.json yarn.lock ./
+RUN yarn
+COPY . ./
+RUN yarn build
+
+FROM nginx:1.12-alpine
+COPY --from=build-deps /usr/src/app/build /usr/share/nginx/html
 EXPOSE 80
-# set working directory
-WORKDIR /app
-# add `/app/node_modules/.bin` to $PATH
-ENV PATH /app/node_modules/.bin:$PATH
-# install and cache app dependencies
-COPY package.json /app/package.json
-# COPY build/index.html public/index.html
-RUN npm install
-RUN npm add react-scripts -g
-# start app
-CMD ["npm", "start"]
+CMD ["nginx", "-g", "daemon off;"]
