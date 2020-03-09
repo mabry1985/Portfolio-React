@@ -6,6 +6,7 @@ env:
     IMAGE_REPO_NAME: "portfolio"
     IMAGE_TAG: "dev"
     AWS_ACCOUNT_ID: "234028429311"
+    
 phases:
   install:
     runtime-versions:
