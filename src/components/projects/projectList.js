@@ -8,7 +8,7 @@ import clima from '../../assets/ClimaTVOS.png'
     {
       title: "Clima tvOS",
       description:
-        "Tasked with learning to create an app for smart tv operating systems, I chose to learn Swift and Xcode to build for tvOS. Using Swift and Xcode",
+        "Tasked with learning to create an app for smart tv operating systems, I chose to learn Swift and Xcode to build for tvOS",
       technologies: ["Swift", "Xcode", "iOS", "tvOS"],
       link: "",
       githubRepo: "https://github.com/mabry1985/Clima",
