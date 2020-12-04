@@ -14,18 +14,16 @@ const App = () => {
   const { landscapeMode, windowSize } = useContext(WindowContext);
   let content;
 
-  if (landscapeMode) {
-    content = <LandscapeMode/>
-  } else if (!landscapeMode && navBarVisible && windowSize.width > 766) {
+if (navBarVisible && windowSize.width > 766) {
     content = (
       <React.Fragment>
         <ResponsiveNav/>
         <MainContent/>
       </React.Fragment>
     )
-  } else if (!landscapeMode && navBarVisible && windowSize.width < 766) {
+  } else if (navBarVisible && windowSize.width < 766) {
       content = <HamburgerMenu/>
-  } else if (!landscapeMode) {
+  } else {
       content = <LandingPage/>
   }
 
