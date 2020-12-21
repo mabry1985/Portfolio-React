@@ -3,8 +3,18 @@ import devChat from '../../assets/DevChat.png';
 import paperTrader from '../../assets/PaperTrader.png';
 import holeitw from '../../assets/holeitw.png';
 import clima from '../../assets/ClimaTVOS.png'
+import wornClothing from '../../assets/WornClothing.png'
 
   export const projectList = [
+    {
+      title: "Worn Clothing",
+      description:
+        "Built as part of a React master course using React and Redux and handling payments using the Stripe API. Database handled by Google Firebase and deployed on Heroku",
+      technologies: ["React", "Redux", "Stripe", "Firebase", "Heroku", "GraphQL"],
+      link: "https://worn-clothing.herokuapp.com/",
+      githubRepo: "https://github.com/mabry1985/Worn",
+      image: wornClothing,
+    },
     {
       title: "Clima tvOS",
       description:
@@ -34,7 +44,7 @@ import clima from '../../assets/ClimaTVOS.png'
         "Node",
         "D3",
         "Heroku",
-        "Styled Components"
+        "Styled Components",
       ],
       link: "https://jobbot-dashboard.herokuapp.com",
       githubRepo: "https://github.com/mabry1985/jobBot-dashboard",
@@ -57,5 +67,5 @@ import clima from '../../assets/ClimaTVOS.png'
       link: "",
       githubRepo: "https://github.com/mabry1985/hole-in-the-wall.git",
       image: holeitw,
-    }
+    },
   ];
